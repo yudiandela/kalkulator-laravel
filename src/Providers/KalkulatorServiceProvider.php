@@ -14,6 +14,11 @@ class KalkulatorServiceProvider extends ServiceProvider
     public function boot()
     {
         /**
+         * Register publish method
+         */
+        $this->publishFiles();
+
+        /**
          * Include route from this packages
          */
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web.php');
@@ -26,10 +31,6 @@ class KalkulatorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        /**
-         * Register publish method
-         */
-        $this->publishFiles();
 
         /**
          * register any controller
@@ -50,7 +51,7 @@ class KalkulatorServiceProvider extends ServiceProvider
     protected function publishFiles()
     {
         $this->publishes([
-            __DIR__ . '/../Views' => base_path('resources/views/vendor/kalkulator'),
+            __DIR__ . '/../Views' => base_path('resources/views/vendor'),
         ], 'kalkulator');
     }
 }
