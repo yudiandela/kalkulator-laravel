@@ -8,13 +8,13 @@
     composer require yudiandela/kalkulator
 ```
 
-2. Register the package
+2. Register the package:
 
 Register the package with laravel in `config/app.php` under `providers` with the following:
 
 ```php
 	'providers' => [
-	    YudiAndela\Kalkulator\Providers\KalkulatorServiceProvider::class,
+		YudiAndela\Kalkulator\Providers\KalkulatorServiceProvider::class,
 	];
 ```
 
