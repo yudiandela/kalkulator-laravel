@@ -27,6 +27,11 @@ class KalkulatorServiceProvider extends ServiceProvider
     public function register()
     {
         /**
+         * Register publish method
+         */
+        $this->publishFiles();
+
+        /**
          * register any controller
          */
         $this->app->make('YudiAndela\Kalkulator\Controllers\KalkulatorController');
